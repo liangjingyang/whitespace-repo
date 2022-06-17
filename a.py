@@ -1,12 +1,12 @@
 import logging
 from typing import Iterable
 
-from merico.analysis.analysis_db import IndicatorFactory
-from merico.analysis.analyzer.aspect_graph_analyzer import CALL_ASPECT_GRAPH
-from merico.graphserver.call_aspect_graph_constants import CAG_DATA_LANGUAGE
-from merico.db.ca_report_models import RCagEdge
+from analysis.analysis_db import IndicatorFactory
+from analysis.analyzer.aspect_graph_analyzer import CALL_ASPECT_GRAPH
+from graphserver.call_aspect_graph_constants import CAG_DATA_LANGUAGE
+from db.ca_report_models import RCagEdge
 
-from merico.analysis.report import check_existence, sources
+from analysis.report import check_existence, sources
 
 _logger = logging.getLogger(__name__)
 
