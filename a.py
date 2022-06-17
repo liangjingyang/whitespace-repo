@@ -16,11 +16,8 @@ _logger = logging.getLogger(__name__)
 def gen_cag_edges(indicator_factory: IndicatorFactory, cag_indicator,
                   analysis_uuid: str) -> Iterable[RCagEdge]:
     for _, cag in cag_indicator.graphs.items():
-        for from_node_id, to_node_id, data in cag.edges(data=True):
-            r_cag_edge: RCagEdge = RCagEdge()
-            r_cag_edge.analysis_id = analysis_uuid
-            r_cag_edge.language = data[CAG_DATA_LANGUAGE]
-            r_cag_edge.from_node_id = from_node_id
-            r_cag_edge.to_node_id = to_node_id
-            yield r_cag_edge
+        r_cag_edge: RCagEdge = RCagEdge()
+        r_cag_edge.analysis_id = analysis_uuid
+        r_cag_edge.language = data[CAG_DATA_LANGUAGE]
+        yield r_cag_edge
 
